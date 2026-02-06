@@ -10,53 +10,57 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Kontakt & Termin | Akens Hair Lounge Aken</title>
+        <title>Kontakt & Termin | The Gentleman's Cut Berlin</title>
         <meta 
           name="description" 
-          content="Kontaktieren Sie Akens Hair Lounge in Aken. Vereinbaren Sie Ihren Termin über unseren Chatbot oder rufen Sie uns an. Di-Fr 09:30-20:00 Uhr, Sa 10:00-16:00 Uhr." 
+          content="Kontaktieren Sie The Gentleman's Cut in Berlin. Vereinbaren Sie Ihren Termin über unseren Chatbot oder rufen Sie uns an. Mo-Fr 09-20 Uhr, Sa 10-18 Uhr." 
         />
-        <link rel="canonical" href="https://akens-hair-lounge.de/kontakt" />
+        <link rel="canonical" href="https://gentlemanscut.de/kontakt" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Barbershop",
-            "@id": "https://akens-hair-lounge.de/#barbershop",
-            "name": "Akens Hair Lounge",
-            "url": "https://akens-hair-lounge.de",
-            "logo": "https://akens-hair-lounge.de/images/logo.png",
-            "image": "https://akens-hair-lounge.de/images/shop.jpg",
-            "telephone": "+49 176 83030293",
+            "@id": "https://example-barbershop.at/#barbershop",
+            "name": "Beispiel Barbershop Wien",
+            "url": "https://example-barbershop.at",
+            "logo": "https://example-barbershop.at/images/logo.png",
+            "image": "https://example-barbershop.at/images/shop.jpg",
+            "telephone": "+43 1 2345678",
             "priceRange": "€€",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Köthener Str. 46",
-              "addressLocality": "Aken",
-              "postalCode": "06385",
-              "addressCountry": "DE"
+              "streetAddress": "Musterstraße 12",
+              "addressLocality": "Wien",
+              "postalCode": "1020",
+              "addressCountry": "AT"
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": "51.8540",
-              "longitude": "12.0435"
+              "latitude": "48.2167",
+              "longitude": "16.3958"
+            },
+            "areaServed": {
+              "@type": "AdministrativeArea",
+              "name": "Wien"
             },
             "openingHoursSpecification": [
               {
                 "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "09:30",
-                "closes": "20:00"
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "19:00"
               },
               {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": "Saturday",
-                "opens": "10:00",
-                "closes": "16:00"
+                "opens": "09:00",
+                "closes": "17:00"
               }
             ],
             "sameAs": [
-              "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1292329.2739745756!2d3.8347281562499993!3d50.7555389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf63f42e681779%3A0x3d1bc663c0de605f!2sBarber's%201999%20by%20Mu!5e0!3m2!1sde!2sde!4v1770415065031!5m2!1sde!2sde",
-              "https://www.instagram.com/akenshairlounge",
-              "https://www.facebook.com/akenshairlounge"
+              "https://www.google.com/maps?cid=1234567890",
+              "https://www.instagram.com/beispielbarbershop",
+              "https://www.facebook.com/beispielbarbershop"
             ]
           })}
         </script>
@@ -92,7 +96,8 @@ const Contact = () => {
         <section className="py-24 bg-charcoal">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              
+              {/* Reihenfolge für Desktop: Chatbot links, Kontakt rechts
+                  Reihenfolge für Mobile: Chatbot oben, Kontakt unten */}
               <AnimateOnScroll animation="slide-left" className="order-1 lg:order-1">
                 <div className="bg-card border border-border rounded-sm p-8 md:p-10 h-fit">
                   <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
@@ -140,6 +145,7 @@ const Contact = () => {
                     </a>
                   </div>
 
+                  {/* Alternative Buchung Block */}
                   <div className="mt-8 pt-8 border-t border-border">
                     <p className="text-muted-foreground text-center mb-6 leading-relaxed">
                       Alternativ können Sie direkt hier die Verfügbarkeit Ihres Wunschtermins prüfen oder einen Termin buchen:
@@ -186,8 +192,8 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Adresse</h3>
                         <p className="text-muted-foreground">
-                          Köthener Str. 46<br />
-                          06385 Aken
+                          Kurt-Schumacher-Straße 25<br />
+                          52224 Stolberg
                         </p>
                       </div>
                     </div>
@@ -214,10 +220,10 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">E-Mail</h3>
                         <a 
-                          href="mailto:info@akens-hair-lounge.de" 
+                          href="mailto:info@gentlemanscut.de" 
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
-                          info@akens-hair-lounge.de
+                          info@mustershop.de
                         </a>
                       </div>
                     </div>
@@ -246,7 +252,7 @@ const Contact = () => {
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Standort Akens Hair Lounge"
+                      title="Standort The Gentleman's Cut"
                     />
                   </div>
                 </div>
